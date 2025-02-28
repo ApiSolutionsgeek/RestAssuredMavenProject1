@@ -8,6 +8,27 @@
     <artifactId>RestAssuredMavenProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <forkCount>0</forkCount>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -19,7 +40,7 @@
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
         <version>5.5.0</version>
-        <scope>test</scope>
+
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -27,7 +48,7 @@
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>7.10.2</version>
-        <scope>test</scope>
+
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
@@ -43,10 +64,11 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+    <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
     <dependency>
-        <groupId>com.github.javafaker</groupId>
-        <artifactId>javafaker</artifactId>
-        <version>1.0.2</version>
+        <groupId>net.datafaker</groupId>
+        <artifactId>datafaker</artifactId>
+        <version>2.4.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
@@ -62,6 +84,12 @@
         <version>3.17.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.javers/javers-core -->
+    <dependency>
+        <groupId>org.javers</groupId>
+        <artifactId>javers-core</artifactId>
+        <version>7.8.0</version>
+    </dependency>
 
 
 </dependencies>
